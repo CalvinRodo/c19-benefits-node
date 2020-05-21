@@ -5,6 +5,8 @@ on:
 jobs:
   deploy_build_dev:
     name: Build and deploy dev container
+    env:
+      AZURE_CONTAINER_REGISTRY_SERVER: ${{ secrets.AZURE_CONTAINER_REGISTRY_SERVER }}
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout Github Action'
